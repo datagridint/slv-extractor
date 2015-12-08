@@ -1,0 +1,1304 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<workbook source-platform='win' version='9.0' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <!-- build 9000.15.0318.1720                                -->
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='slv-20151101000000-20151102000000' inline='true' name='textscan.42327.927436226855' version='9.0'>
+      <connection class='textscan' directory='C:/Dev/projects/DataGrid/slv-extractor/data' filename='slv-20151101000000-20151102000000.csv' password='' server=''>
+        <relation name='slv-20151101000000-20151102000000#csv' table='[slv-20151101000000-20151102000000#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='geoZoneNamesPath' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='datetime' name='eventTime' ordinal='2' />
+            <column datatype='datetime' name='updateTime' ordinal='3' />
+            <column datatype='string' name='Temperature' ordinal='4' />
+            <column datatype='real' name='RunningHoursLamp' ordinal='5' />
+            <column datatype='real' name='Energy' ordinal='6' />
+            <column datatype='real' name='Current' ordinal='7' />
+            <column datatype='real' name='MainVoltage' ordinal='8' />
+            <column datatype='real' name='MeteredPower' ordinal='9' />
+            <column datatype='real' name='PowerFactor' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>geoZoneNamesPath</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[geoZoneNamesPath]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>geoZoneNamesPath</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>eventTime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[eventTime]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>eventTime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>updateTime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[updateTime]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>updateTime</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Temperature</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Temperature]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>Temperature</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RunningHoursLamp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RunningHoursLamp]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>RunningHoursLamp</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Energy]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>Energy</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Current</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Current]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>Current</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MainVoltage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MainVoltage]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>MainVoltage</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MeteredPower</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MeteredPower]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>MeteredPower</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PowerFactor</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[PowerFactor]</local-name>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias>PowerFactor</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[slv-20151101000000-20151102000000#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Main Voltage' datatype='real' name='[MainVoltage]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Metered Power' datatype='real' name='[MeteredPower]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Power Factor' datatype='real' name='[PowerFactor]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Running Hours Lamp' datatype='real' name='[RunningHoursLamp]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Event Time' datatype='datetime' name='[eventTime]' role='dimension' type='ordinal'>
+      </column>
+      <column caption='Geo Zone Names Path' datatype='string' name='[geoZoneNamesPath]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal'>
+      </column>
+      <column caption='Update Time' datatype='datetime' name='[updateTime]' role='dimension' type='ordinal'>
+      </column>
+      <column-instance column='[geoZoneNamesPath]' derivation='None' name='[none:geoZoneNamesPath:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:geoZoneNamesPath:nk]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;AMKO Taiwan/Abu Dhabi/Pilot Site Mussafah - Induction&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;AMKO Taiwan/Battambang/Battambang NH5&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;AMKO Taiwan/AMKO El Salvador/Suchitoto Pilot&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='all_meters' inline='true' name='textscan.42047.810988761572' version='9.0'>
+      <connection class='textscan' directory='C:/Dev/projects/AmkoSolara/Pilot Analysis/data/abudhabi' filename='all_meters.csv'>
+        <relation name='all_meters#csv' table='[all_meters#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='datetime' name='date' ordinal='0' />
+            <column datatype='string' name='id' ordinal='1' />
+            <column datatype='real' name='Driver temperature (°C)' ordinal='2' />
+            <column datatype='real' name='Lamp burning hours' ordinal='3' />
+            <column datatype='real' name='Lamp energy (kWH)' ordinal='4' />
+            <column datatype='real' name='Mains current' ordinal='5' />
+            <column datatype='real' name='Mains voltage (V)' ordinal='6' />
+            <column datatype='real' name='Metered power (W)' ordinal='7' />
+            <column datatype='real' name='Power factor' ordinal='8' />
+          </columns>
+        </relation>
+        <refresh incremental-updates=''>
+        </refresh>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Driver temperature (°C)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Driver temperature (°C)]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>Driver temperature (°C)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lamp burning hours</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lamp burning hours]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>Lamp burning hours</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Lamp energy (kWH)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Lamp energy (kWH)]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>Lamp energy (kWH)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mains current</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mains current]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>Mains current</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mains voltage (V)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Mains voltage (V)]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>Mains voltage (V)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Metered power (W)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Metered power (W)]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>Metered power (W)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Power factor</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Power factor]</local-name>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias>Power factor</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name></remote-name>
+            <remote-type>0</remote-type>
+            <parent-name>[all_meters#csv]</parent-name>
+            <remote-alias></remote-alias>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='CountD' datatype='real' name='[Driver temperature (°C)]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='CountD' datatype='real' name='[Lamp burning hours]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='CountD' datatype='real' name='[Mains current]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='CountD' datatype='real' name='[Mains voltage (V)]' role='measure' type='quantitative'>
+      </column>
+      <column aggregation='CountD' datatype='real' name='[Metered power (W)]' role='measure' type='quantitative'>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='CountD' datatype='real' name='[Power factor]' role='measure' type='quantitative'>
+      </column>
+      <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal'>
+      </column>
+      <column aggregation='CountD' caption='Id' datatype='string' name='[id]' role='dimension' type='nominal'>
+      </column>
+      <extract count='-1' enabled='true' units='records'>
+        <connection class='dataengine' dbname='C:\Dev\projects\AmkoSolara\Pilot Analysis\data\abudhabi\all_meters.tde' schema='Extract' tablename='Extract' update-time='02/15/2015 07:41:47 PM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <calculations>
+            <calculation column='[Number of Records]' formula='1' />
+          </calculations>
+          <refresh>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='72469' timestamp-start='2015-02-15 19:41:47.083' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Driver temperature (°C)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Driver temperature (°C)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Driver temperature (°C)</remote-alias>
+              <ordinal>0</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3773</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>8.3499999999999996</statistic>
+                <statistic aggregation='Max' datatype='real'>52.270000000000003</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lamp burning hours</remote-name>
+              <remote-type>4</remote-type>
+              <local-name>[Lamp burning hours]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lamp burning hours</remote-alias>
+              <ordinal>1</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>499</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>441.0</statistic>
+                <statistic aggregation='Max' datatype='real'>991.0</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;float&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Lamp energy (kWH)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Lamp energy (kWH)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Lamp energy (kWH)</remote-alias>
+              <ordinal>2</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2127</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.0</statistic>
+                <statistic aggregation='Max' datatype='real'>222.90000000000001</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mains current</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mains current]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mains current</remote-alias>
+              <ordinal>3</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.040000000000000001</statistic>
+                <statistic aggregation='Max' datatype='real'>0.97999999999999998</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mains voltage (V)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Mains voltage (V)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mains voltage (V)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>234.19999999999999</statistic>
+                <statistic aggregation='Max' datatype='real'>254.40000000000001</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Metered power (W)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Metered power (W)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Metered power (W)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>561</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.20000000000000001</statistic>
+                <statistic aggregation='Max' datatype='real'>234.5</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Number of Records</remote-name>
+              <remote-type>16</remote-type>
+              <local-name>[Number of Records]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Number of Records</remote-alias>
+              <ordinal>6</ordinal>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='integer'>1</statistic>
+                <statistic aggregation='Max' datatype='integer'>1</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;sint8&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Power factor</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Power factor]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Power factor</remote-alias>
+              <ordinal>7</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>881</approx-count>
+              <contains-null>true</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='real'>0.0078499999999999993</statistic>
+                <statistic aggregation='Max' datatype='real'>0.98709999999999998</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>8</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>51663</approx-count>
+              <contains-null>false</contains-null>
+              <statistics>
+                <statistic aggregation='Min' datatype='datetime'>#2014-06-03 06:10:54#</statistic>
+                <statistic aggregation='Max' datatype='datetime'>#2014-12-11 05:45:00#</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;array&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (ordered)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>0</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>2</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;datetime&quot;</attribute>
+              </attributes>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>9</ordinal>
+              <family>all_meters#csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>14</approx-count>
+              <scale>1</scale>
+              <width>1073741823</width>
+              <contains-null>false</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <statistics>
+                <statistic aggregation='Min' datatype='string'>&quot;20.0&quot;</statistic>
+                <statistic aggregation='Max' datatype='string'>&quot;33.0&quot;</statistic>
+              </statistics>
+              <attributes>
+                <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (comparable)'>true</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+                <attribute datatype='boolean' name='DebugRemoteMetadata (distinct)'>true</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (sort-position)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteMetadata (sort-sense)'>&quot;asc&quot;</attribute>
+                <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>1</attribute>
+                <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+              </attributes>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.4' rowDisplayCount='100000' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Abu Dhabi Hourly'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='all_meters' name='textscan.42047.810988761572' />
+            <datasource caption='slv-20151101000000-20151102000000' name='textscan.42327.927436226855' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42047.810988761572'>
+            <column aggregation='CountD' datatype='real' name='[Driver temperature (°C)]' role='measure' type='quantitative'>
+            </column>
+            <column aggregation='CountD' datatype='real' name='[Lamp burning hours]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='real' name='[Lamp energy (kWH)]' role='measure' type='quantitative'>
+            </column>
+            <column aggregation='CountD' datatype='real' name='[Mains current]' role='measure' type='quantitative'>
+            </column>
+            <column aggregation='CountD' datatype='real' name='[Mains voltage (V)]' role='measure' type='quantitative'>
+            </column>
+            <column aggregation='CountD' datatype='real' name='[Metered power (W)]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column aggregation='CountD' datatype='real' name='[Power factor]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Driver temperature (°C)]' derivation='Avg' name='[avg:Driver temperature (°C):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lamp burning hours]' derivation='Avg' name='[avg:Lamp burning hours:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Lamp energy (kWH)]' derivation='Avg' name='[avg:Lamp energy (kWH):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mains current]' derivation='Avg' name='[avg:Mains current:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Mains voltage (V)]' derivation='Avg' name='[avg:Mains voltage (V):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Metered power (W)]' derivation='Avg' name='[avg:Metered power (W):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Power factor]' derivation='Avg' name='[avg:Power factor:qk]' pivot='key' type='quantitative' />
+            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal'>
+            </column>
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Hour-Trunc' name='[thr:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='textscan.42327.927436226855'>
+            <column datatype='real' name='[Current]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[Current]' derivation='Sum' name='[sum:Current:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.42047.810988761572].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[sum:Number of Records:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[avg:Mains voltage (V):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[avg:Mains current:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[avg:Power factor:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[avg:Metered power (W):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[avg:Driver temperature (°C):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[avg:Lamp energy (kWH):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42047.810988761572].[avg:Lamp burning hours:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[textscan.42327.927436226855].[sum:Current:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[textscan.42047.810988761572].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[textscan.42047.810988761572].[sum:Number of Records:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42047.810988761572].[avg:Mains voltage (V):qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42047.810988761572].[avg:Mains current:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42047.810988761572].[avg:Power factor:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42047.810988761572].[avg:Metered power (W):qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42047.810988761572].[avg:Driver temperature (°C):qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42047.810988761572].[avg:Lamp energy (kWH):qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42047.810988761572].[avg:Lamp burning hours:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <filter class='quantitative' column='[textscan.42047.810988761572].[none:date:qk]' included-values='in-range'>
+            <min>#2014-11-07 00:00:00#</min>
+          </filter>
+          <slices>
+            <column>[textscan.42047.810988761572].[none:date:qk]</column>
+            <column>[textscan.42047.810988761572].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='subtitle' class='0' field='[textscan.42047.810988761572].[thr:date:qk]' scope='cols' value='' />
+            <format attr='auto-subtitle' class='0' field='[textscan.42047.810988761572].[thr:date:qk]' scope='cols' value='true' />
+            <format attr='subtitle' class='0' field='[textscan.42047.810988761572].[Multiple Values]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[textscan.42047.810988761572].[Multiple Values]' scope='rows' value='true' />
+            <encoding attr='space' class='0' field='[textscan.42047.810988761572].[thr:date:qk]' field-type='quantitative' max='#2014-12-11 21:57:58.788#' min='#2014-11-06 11:48:36.697#' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' domain-expand='false' field='[textscan.42047.810988761572].[Multiple Values]' field-type='quantitative' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1358' />
+                <format attr='maxwidth' value='1358' />
+                <format attr='minheight' value='242' />
+                <format attr='maxheight' value='242' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1358' />
+                <format attr='maxwidth' value='1358' />
+                <format attr='minheight' value='242' />
+                <format attr='maxheight' value='242' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([textscan.42047.810988761572].[:Measure Names] * [textscan.42047.810988761572].[Multiple Values])</rows>
+        <cols>[textscan.42047.810988761572].[thr:date:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='slv-20151101000000-20151102000000' name='textscan.42327.927436226855' />
+          </datasources>
+          <datasource-dependencies datasource='textscan.42327.927436226855'>
+            <column datatype='real' name='[Current]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='real' name='[Energy]' role='measure' type='quantitative'>
+            </column>
+            <column caption='Main Voltage' datatype='real' name='[MainVoltage]' role='measure' type='quantitative'>
+            </column>
+            <column caption='Metered Power' datatype='real' name='[MeteredPower]' role='measure' type='quantitative'>
+            </column>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Power Factor' datatype='real' name='[PowerFactor]' role='measure' type='quantitative'>
+            </column>
+            <column caption='Running Hours Lamp' datatype='real' name='[RunningHoursLamp]' role='measure' type='quantitative'>
+            </column>
+            <column-instance column='[name]' derivation='Attribute' name='[attr:name:nk]' pivot='key' type='nominal' />
+            <column caption='Event Time' datatype='datetime' name='[eventTime]' role='dimension' type='ordinal'>
+            </column>
+            <column caption='Geo Zone Names Path' datatype='string' name='[geoZoneNamesPath]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[eventTime]' derivation='Hour' name='[hr:eventTime:ok]' pivot='key' type='ordinal' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal'>
+            </column>
+            <column-instance column='[geoZoneNamesPath]' derivation='None' name='[none:geoZoneNamesPath:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Current]' derivation='Sum' name='[sum:Current:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Energy]' derivation='Sum' name='[sum:Energy:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MainVoltage]' derivation='Sum' name='[sum:MainVoltage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MeteredPower]' derivation='Sum' name='[sum:MeteredPower:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[PowerFactor]' derivation='Sum' name='[sum:PowerFactor:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[RunningHoursLamp]' derivation='Sum' name='[sum:RunningHoursLamp:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[textscan.42327.927436226855].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <sort class='manual' column='[textscan.42327.927436226855].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[textscan.42327.927436226855].[sum:Number of Records:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42327.927436226855].[sum:RunningHoursLamp:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42327.927436226855].[sum:Current:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42327.927436226855].[sum:Energy:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42327.927436226855].[sum:MainVoltage:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42327.927436226855].[sum:MeteredPower:qk]&quot;</bucket>
+              <bucket>&quot;[textscan.42327.927436226855].[sum:PowerFactor:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <filter class='categorical' column='[textscan.42327.927436226855].[none:geoZoneNamesPath:nk]'>
+            <groupfilter function='member' level='[none:geoZoneNamesPath:nk]' member='&quot;AMKO Taiwan/Abu Dhabi/Pilot Site Mussafah - Induction&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[textscan.42327.927436226855].[:Measure Names]</column>
+            <column>[textscan.42327.927436226855].[none:geoZoneNamesPath:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+        </style>
+        <panes>
+          <pane>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <lod column='[textscan.42327.927436226855].[attr:name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([textscan.42327.927436226855].[:Measure Names] * [textscan.42327.927436226855].[Multiple Values])</rows>
+        <cols>[textscan.42327.927436226855].[hr:eventTime:ok]</cols>
+        <show-full-range>
+          <column>[textscan.42327.927436226855].[eventTime]</column>
+        </show-full-range>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style>
+      </style>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='100000' id='3' name='Abu Dhabi Hourly' show-title='true' w='100000' x='0' y='0'>
+          </zone>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='schema' source-height='-1' />
+    <window auto-hidden='0' class='dashboard' maximized='0' name='Dashboard 1'>
+      <active id='3' />
+      <zones>
+        <zone name='Abu Dhabi Hourly'>
+          <viewpoint>
+            <zoom type='entire-view' />
+            <floating-toolbar-visibility value='1' />
+            <geo-search-visibility value='1' />
+          </viewpoint>
+        </zone>
+      </zones>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='Abu Dhabi Hourly'>
+      <cards>
+        <edge name='left'>
+          <strip size='239'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <floating-toolbar-visibility value='1' />
+        <geo-search-visibility value='1' />
+      </viewpoint>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42047.810988761572].[:Measure Names]</field>
+          <field>[textscan.42047.810988761572].[attr:id:nk]</field>
+          <field>[textscan.42047.810988761572].[hr:date:ok]</field>
+          <field>[textscan.42047.810988761572].[mn:date:ok]</field>
+          <field>[textscan.42047.810988761572].[none:date:qk]</field>
+          <field>[textscan.42047.810988761572].[none:id:nk]</field>
+          <field>[textscan.42047.810988761572].[yr:date:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+    <window auto-hidden='0' class='worksheet' maximized='1' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='289'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[textscan.42327.927436226855].[none:geoZoneNamesPath:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <highlight>
+        <color-one-way>
+          <field>[textscan.42327.927436226855].[:Measure Names]</field>
+          <field>[textscan.42327.927436226855].[attr:geoZoneNamesPath:nk]</field>
+          <field>[textscan.42327.927436226855].[attr:name:nk]</field>
+          <field>[textscan.42327.927436226855].[none:geoZoneNamesPath:nk]</field>
+          <field>[textscan.42327.927436226855].[none:name:nk]</field>
+          <field>[textscan.42327.927436226855].[yr:eventTime:ok]</field>
+        </color-one-way>
+      </highlight>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAACXBIWXMAAA7EAAAOxAGVKw4b
+      AAASF0lEQVR4nO3d6W8j530H8Gc4nIPkkMNTpESKklbXauU9HGd9FrGdxEEdtEngGAiQonlR
+      oAX6bxV9USCNXxRF4QYu6my8tuy9tNrVanVSEg/xHnIuzsGZpy/WNbnaw0ZGQ61Hv8+bXQyl
+      Z4bQFzPPPM/85iEwxgiAv5TvtA8AfL9BgIAjXwcIY3N7p9A83Hx40Bz+uFUu/P7fP9qvND79
+      3z99s7Fe2NgutTG2Nx5uIoS219dU01q7v/5k6+u3Putobh4+OG3+R/8c3PvqP78qfvD61MfX
+      /lx/5aohNwJ+6tW3325V9qeWXrn2P//da1X3D4s/fufNT/90fXk2d/3e51cuLDRlc+n84tba
+      zc/vPlB0u7q/2eqRmUjo/PLk+sPD/VIjxeGG4stPjrVk4urF2dP9qsANPoQQxvjaF7dp+XBt
+      r57NTxd2Nve2Hq6uPbARQggdFrZskuGSE8v58LXPVlbv3CzWu9nJqYNy1dJEhBBBMn/zqw8i
+      DC7XWpZUK5bLt2/fqdVqC1dejwap6XNT//ov/zZzbvJUvyZwC4Exxtiu1RrpBF+s1DVdz+an
+      pWZF0tHs7JQmCvuV+uzcXKfVDNBkHxOC0AmFQqIo5fLTstQdSyVb9VokkWq3mrTPVvpkPOQv
+      HTV4nmdCEbKvNhu1WxvlD3/x3ml/U+AKAm7jgRN+hBDGWFXVUezM72cYZgQ7AiMDZyDgCIwD
+      AUcgQMARv4ttYyzJstRpBiIJVellJ9Iu7gucEhcDZGjSyo07YRr78IGAA4lkjMAYOtEe42KA
+      6ACXzST9qC8pGtOnWJp2b1/gtMBdGHDkZDrRcqu6srLS6vZOpDXwPTK4hJW37ilUSJNRfjql
+      dlqGTcrddmpiylC6oVCACvK9bkPptlQmszxzvDtsW/1SuXzu/OXRHjw4fYMA9WS1YXYOHzYb
+      6gSti71ms2zHl+Ta4V7LDMZ++6v3HtwtNEqFV95/Skos20ZmryPrY9HANxtty9zdLxKGEozE
+      Gx3l8vLCKL4QGK1BgLLzS5MUtTTf68i9BB/CfbNn9H0Um812uWiM8PlmpmfOX7jIBp5sBFdr
+      jbGJ6VSUHd5q9c1atcKS1P27d7n8ec0w4C7Me4bPQJ39anN6fvlcPv5oSxQhhJDBYhGzCBFj
+      47lnNEIk+Mi97e28dDHGDTJEMYHpqWlNFiZ+9G5DUOAuzJMGd2E7tz/fEVQ/JluKnuEwosKW
+      jbRusW/6DDqcHJt45/Urz2gEP1y7qdiB80vnQ4ybI5PgxTP4e8fH828uRqrFo6RNBLCK/CHb
+      R4Znc61qleQSoVDoOa3w0cTu6r3JmVkI0FlzIuNAWJYVjuNO4HDA943bA4n49o2VRCJRqMnv
+      vPEDN3cETofLs/HYpnzEnVt3ddPUDEPXdXd3B0bO9TNQtVQMJ5IdQYLZeE+CuTDgyCgeKLP7
+      RrlSG8GOwOiNIkClrfX7O/vWCPYERm4UAeKTCYaiyBHsCYzco8LCUZT1mKbp8/kikYjbOwKj
+      BJ1o4AhUZQBHXJy66jRrB7VOwGfwsUS1JcPzQJ7k4hkoEovjvm5o2tqt242uCCPRnuTiGahV
+      rZBsiLGJxYsXBUmH54E8CTrRwBHoRANHTiZAZk968GBDNWC0+cwZBAhjvLu3N/yZrXUe7JYe
+      PFhHCPUk+TnpkFqN9Y11oTuKlwyBF8rQQ/Xtw2uf3REkWW/sler9n/z6w5gmrW1sIbXTrR3u
+      FAQ+x/MkuV2R/+HvPzx24mK4yGQ6YfQfy1i7flRuyTNjYUE1BKV/6fy5kXwjMFKDAMl99ne/
+      ea9UEYj45fXtT/qaQrCR5ak0zS0SPSEQmYik45TR4xL9JxrBm+t3V9d3f3Hh1eGt0USieNS4
+      /ucbfn6a9JO9czkflPV4zlPuwmRZIgjfsafotV7P7FsIWzTDPhmC+v72pzdvvfrW+9Pj/Dcb
+      q8U9QffNZ+OlqtBRtcvLi4RLXwKcnkGADvd2VdsSq8WqjFjC8vfVQGaGtHsHWztv/fwDqX4o
+      SbKPJEOh0OLCsTFlXNovYJKKj41DVcZZM+jMTGR4WcUIIY6LpJOcqplm3xJFcWJymmMphAg+
+      6EtmptFTxo0IPhJcuX5d0cwRHjl4ITxvILFVq2AmnIyGEUKaprEsi7Gt6ybLHruE4Z3Nh5n8
+      LBeAseYzB0aigSMujkSbPfmwXLWMniQr8Ey0V7n5jkQL1Y5KneKDSrtPcDy8I9GTXAyQItQs
+      kmVozGNLR/CORG+CPhBwBGbjgSMQIODI16v19HqjeMEqSZLQifYY6AMBR+ASBhyBAAFHIEDA
+      EQgQcAQCBByBAAFHoKwHOAJlPcARF8t6wFlwMmU9xf29vWJ99uLxaYqdjfu6j83HqIf1/tWX
+      Zl3+LuAUDAI0lk4jhKZmIgihf/rnf3y08eJFXlGUUGiwTs/k01rheZ6mfEbfPrZdUo0+1vr8
+      eL20rS5MkvBAmecMAlQ52G31DFIWdlp6NEDahuoj/W3JsAn/r/72Z8/vbKuaubi0yJDHC78W
+      5qY1m6RI/NJLy0F4oMyLHnsiESOy020R/mQyyeO+FqD9FKvoxPPW6UEIIUSMpZMf//HTdG7+
+      2AchPv7ol7lI9OSOGbxATma1HijrObPgcQ7gCIxEA0cgQMARCBBwBAIEHHH3bSyrN1Z6iJlJ
+      MF9sNX75129DWr3H/b8ptnqa5vpewCn5erWeEZT1GIYBq/V4j7vjQIYqrm4UXrm0cP3a9aWr
+      b0UYH8yFeYy7lzA6yOG+ZpmqbRiybkN6vMf1VZtFUSJJX0fojGdzPnjLpufAVAZwBO6sgSMQ
+      IOAIBAg4AmU9wJHnlvWY8pdf3izXWt/aCpT1nFnPLeuxlEpVMOXWV1/6YiGzLRO2LnAsnVn+
+      0ZXZseFWoKznzHpuWU8w9OprP0yG0dpWJc4HZkjS7Mk2QmMTiccbeWZZT7W0rxOBTMS/We7C
+      ck+eNAhQPMq1FWtqZgoh9He/++2j1XqyGYQQuvpy7PmtPKus56gmWLgRpcfbjQYs9+RJgwAV
+      7t3psomN9VVs+8WenIlQHQVduXo1FeW+tZVnlfWMp2Mapow+isajLE3DQLT3DAIUTWbqtTZD
+      +zUdpdNp1Gsjgop+h/Q8p6wnk5t+9J/U+EkdMHixQFkPcATmwoAjMBINHIEAAUcgQMARCBBw
+      BMp6gCNQ1gMcGV1ZD4LVerwIxoGAI9AtAY642InuNGvru8Ug0v1ssKXid974gXv7AqfFxTMQ
+      G2ATcd60UGFrUzdNzTB0XXdvd+BUuNgHEtuNcktOhhkuGm+3u9mJtEs7AqcIOtHAEehEA0dO
+      JkAY25IowbnsDBoKEMadTmf4M2xqTUFqNpsIIVNTjlV9ybL0zf/re+u//+gPu5Wuq8cKXkCD
+      23hLE774an1udsLo1kpV+fX3fsYp9U8+LyDpKBVhOl0pkJry+cwQog4r5ZmFRcPQ3/mrNx/9
+      LpcYz2XGwkHqlL4FODVDa2VUW9kkrao6yYQUsSIqCudnU0FMpy6EkJLOjLd0KpNiTamPmECA
+      9tH0N49L4+L+XqPR7OlPLuQDPG4QoMmZ+ckZhBCyTI0NxHLREIFCP3l37Jm/OoTneSYQoCjS
+      paMEL6xBgOrlomgRAZ/dbAiRRGxj9Wbb8OXSyXwmunr3gawjwlJoLvHS5SuhJ65UqmYuXVg6
+      VtZj6r2HO3t2T7ERki3qrddehls+7xkEqFEq1X10jDAIjA5LSoQOsQFGVRSMI1wqj4Ua6WNT
+      4cDT7rS+LutJZR9bUo5iGFUSdbnbt1HXDpiGgaCw0HMGA4mKKDKRyNPmxrCm6SzLIoQ0TXv0
+      n2M/AGU9ZxaMRANHoFsCHIEAAUcgQMARCBBwBAIEHIEAAUf8CCEo6wF/MRgHAo7AJQw4AgEC
+      jkCAgCPuvp0DIbR99/Niy+waCN7O4Uku/02xJUpKT1ERQiYUFnoR3IUBRwaXMGz1Pv5k5eVL
+      S5YhF0uNS6+9wRi1//hkLZsK2thik9NxsteSrQBtzcy/xPgff/iwJ20XStNzC0Eanmo9WwYB
+      OtzZ5hi0e1BChlAuixMXlCyDECKQLkqmXzSLsqVulsW5uex5//FXzj9arYdP5YKp8EgPH5y2
+      p1zCLFO7v769fPniEzl5JqXTvHf/Xnr25Znx6AkfIHixDc5ABxurViQTYWmxIybSyVblkA3H
+      Ol2J9dkmtsVmlYzPjEf9oqhZlpmfyg+l65mr9SBsP7x/27SplmrB6108aRAgs6evFu6Oc7jT
+      UKTg2GSYONr6Lzw2n46zYb+9+WCDnbTbQVEX+mVR/Wl8PB0eFGc8a7UehFAoxN25s86kcpph
+      EPBQvecMLmG6Kra7ip+mSYQtH7X/8P788qVuV4zxYUUSKZoy+7ZNEOEgJ7Rb+akpYnAKwrsb
+      66ptj2fnktHg4+3jarkYjqc6ggivd/GkoQCJ7c3CgY1JC9ljiTgXzcTC37XKQmpXP/7jp2+/
+      /8sxPuDaoYIX0WAgcb9cu3D55SDRn5qdY9hArXzwnRvBtYbw/i8/gPScQUNnIKkl4VAiTO3t
+      FMZSvOnn4xzUeYFv4fJINLY319fkni71KbgL8yS35zeJQCjoty14yaZXuTsbjxE2TGti7nxS
+      N1kaLogeBJOpwBF4RAc4AgECjkBZD3AE+kDAERfvwsyefNSWA6QNSx14mIsBMixUqxxg06yW
+      rjGZmUQyBrPx3uNiJ1oRapafo/zEzOIiQ1EsTUN6vAf6QMARuI0HjkCAgCMn04l+almPbZm7
+      +0Wsy4FwtC1ql5cXTmRf4IUyOANhjHf39oY/s025XBW+SyuPynqErjq80eqbtdpRpVxavXGr
+      0RVhNt6TBmegXvvw2md3BEnWG3ulev8nv/4wZimVmirXdzYL+1K7Z8fS2YAdSed/eGX5WCsM
+      F5lMJ4z+YwtCUUxgOp9XxQ7LRQRJh9l4TxoESO6zv/vNe6WKQMQvr29/0tcUIhjCeskOcwuL
+      S5SPNqhAcWM1k3lyPPBZZT1ELjeJ0CRCKO/y1wCn5bvdxmMsNJuheMzoGYah2YYWTqQUUY0l
+      eAIhhPBRYev6rbU33v15NhFy+4jBC2VwBjoqbFxbO8hFCYII7DelmXQU+fqyjKbO5fIJ9uaN
+      ++H8OVo6rCoMau8G84scycaViXP5MYSQqpmLS4vHVusBZ8HQyxUIanH+HIV7YqM9Pz8b8lly
+      pxJk6bZo5xNEMBxlSB9BRy+kA3IilJ6bFQ7L//+rX6/Wk87NDzdt9MRrK7ctqc0nUkeSDe8H
+      8qRnXsIwxoeFXY6PcXyMIQlN14+t06NrGsWyPoSevVqP/eXKiip2NN3UqOjPf/wGLPfkPTCV
+      ARyBqwpwBAIEHHEzQBhLkmQZPUlWypWaizsCp8fNB8o0aeXGnXTQqrT7BMfDA2We5GKA6ACX
+      zSTJvspjS0cUTGV4EtyFAUegrAc44tYZqFHZrYt2o3QYHUuRpE+oVpeuvhVhfBAgj3HrLoyP
+      haVms28YpYYitcu2Yci6DenxHrfOQLZlKGq/221Hw0ED0T2pM57N+WCy1XOgEw0cgZFo4AgE
+      CDgCAQKOnMxINMa2LClcODz09nHULu/dKTTjlOlngy0Vw0s2PWnoDIRxp9MZ/gxbhih/pwHG
+      +t767z/6w26lO7xR7EqqKhkWKmxtwks2vWpwBrI04Yuv1udmJ4xurVSVX3/vZ5wpbO6q+bi9
+      WTiQOz2CjyeofmRs8vzc9LFWuMR4LjMWDlLDG3NzCySfYUnr0g9eabe7MBfmSYMAVaqtbJJW
+      VZ1kQopYERUlzFLdVmVPQTRFjqXiPYYXawV+7MnBHFzc32s0mj29/1jTdGAy+/W767MT7BO/
+      BbxgEKDJmfnJGYQQskyNDcRy0RCBQj/98VtDP4xFMReJRJ5shed5JhCgKFiu8MwZDCSu31pR
+      6WgmykpNQUUEwwT0Ts0KJpJBgmD4WnGbT+XIvmzgYDzOtVoNS9cXLv0wRPsQwnK7uX90lHnK
+      aj3A44bKekyzJFTFI7FRaifmliLYrhYe+vNXTaFFhHSSYnW52xFq9ZoYTCaTkVB5dzO3eCVE
+      0wihWqOhSAqCqYqz51unMnDlsIAZPptOPOdnth/c133s0sIcCRk6Y1ycCxNqpf2mguQmjAN5
+      mIsj0fVKpXCwD+NA3ubiGcju6+WawMJrfj0NHucAjsBkKnAEAgQcgQABR/4PG6NhhkJnqvIA
+      AAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Abu Dhabi Hourly' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
