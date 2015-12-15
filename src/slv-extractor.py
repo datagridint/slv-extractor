@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 import pandas as pd
 import requests
 import requests.packages.urllib3
-from slv_storage import FileStorage
+from slv_storage import CloudSQLStorage
 
 # Silence the SSL warnings
 requests.packages.urllib3.disable_warnings()
@@ -43,8 +43,8 @@ GETDEVICESLOGVALUES_URL = "https://mycityisgreen.com/reports/api/servlet/SLVLogg
 # Defaults for command line arguments that control the script, especially in regards to cron-mode vs. standalone mode
 directory = "../data/"
 todate = datetime.now()
-todate = todate - timedelta(minutes=todate.minute, seconds=todate.second)
-fromdate = todate - timedelta(days=1)
+todate = todate - timedelta(minutes=todate.minute, seconds=todate.second, microseconds=todate.microsecond)
+fromdate = todate - timedelta(hours=24)
 cron = True
 
 
@@ -281,23 +281,25 @@ def main(argv):
     df2 = df2.merge(df[df.field == 'PowerFactor'][['geoZoneNamesPath', 'eventTime', 'updateTime', 'name', 'value']],
                     on=['geoZoneNamesPath', 'eventTime', 'updateTime', 'name'], how='outer').rename(
         columns={'value': 'PowerFactor'})
-
-    print df2.columns.values
     print "Number of records retrieved in this request:", df2.shape[0]
-    print df2[pd.isnull(df2.geoZoneNamesPath)]
 
     # Create a connector to read and write slv data to the file system
-    store = FileStorage(directory, fromdate, todate, cron)
+    # store = FileStorage(directory, fromdate, todate, cron)
+    store = CloudSQLStorage(fromdate, todate)
 
     # If we're in cron mode, we should merge this data with any previously stored data in the same time range
     if cron:
         existing_df = store.get_existing_data()
+        # print existing_df
+
         if existing_df is not None:
             # merge the current readings with what we found in storage, and then drop duplicates
             df2 = pd.concat([existing_df, df2], ignore_index=True)
-            # print 'Number of records after merging requested and existing data:', df2.shape[0]
+            print 'Number of records after merging requested and existing data:', df2.shape[0]
             df2.drop_duplicates(subset=['geoZoneNamesPath', 'name', 'eventTime'], inplace=True)
-            # print 'Number of records after deduping merged data:', df2.shape[0]
+            print 'Number of records after deduping merged data:', df2.shape[0]
+        else:
+            print 'Number of records found in this date range:', df2.shape[0]
 
     # Sort and swap the columns so that they're easy to look at in Excel
     df = df2.sort(['geoZoneNamesPath', 'name', 'eventTime'])
@@ -305,7 +307,7 @@ def main(argv):
         ['geoZoneNamesPath', 'name', 'eventTime', 'updateTime', 'Temperature', 'RunningHoursLamp', 'Energy', 'Current',
          'MainVoltage', 'MeteredPower', 'PowerFactor']]
 
-    # Write the data to a file or files
+    # Write the data to the store
     store.write(df)
 
     print "Done"

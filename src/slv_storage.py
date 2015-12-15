@@ -3,6 +3,7 @@
 from datetime import datetime, timedelta
 import pandas as pd
 import os
+from sqlalchemy import create_engine
 
 
 class FileStorage(object):
@@ -13,7 +14,7 @@ class FileStorage(object):
     """
 
     def __init__(self, directory, fromdate, todate, cron):
-        """ Constructor allows for directory to be passed in """
+        """ Constructor allows for directory, dates, and run-mode to be passed in """
         self.directory = directory
         self.fromdate = fromdate
         self.todate = todate
@@ -94,15 +95,57 @@ class CloudSQLStorage(object):
     """Handles storage of SLV data in a CloudSQL instance
 
     Attributes:
-        connectionstring: A string used to connect to the CloudSQL instance
+        No attributes
     """
+    config = {
+        'user': 'slvdbuser',
+        'password': 'slvdbuser',
+        'host': '173.194.249.226',
+        'port': '3306',
+        'database': 'streetlightdata'
+    }
+    mysql_connectionstring = 'mysql://{user}:{password}@{host}:{port}/{database}'.format(**config)
 
-    def __init__(self, configfile):
-        self.config = configfile
+    def __init__(self, fromdate, todate):
+        self.cnx = create_engine(self.mysql_connectionstring)
+        # self.cnx = mysql.connector.connect(**self.config)
+        self.fromdate = fromdate
+        self.todate = todate
+
+        df = pd.read_sql('show databases;', self.cnx)
+        print df
 
     # Method to read a particular date range and return a pandas dataframe
+    def get_existing_data(self):
+        """ Read in any file in the specified directory that contain data from the previous 24 hours
 
-    # Method to take a pandas dataframe and write the data to CloudSQL
+        :return: A pandas dataframe containing all the data found in the previous 24 hours
+        """
+        sql = '''
+            SELECT *
+              FROM readings
+             WHERE eventtime >= '{0}'
+               AND eventtime <= '{1}'
+        '''.format(self.fromdate, self.todate)
+        # print sql
 
-    def __init__(self):
-        pass
+        df = pd.read_sql(sql=sql, con=self.cnx)
+        # print df
+        return df
+
+    def write(self, df):
+        """ Takes a pandas dataframe and writes the data to CloudSQL
+        :param df: A dataframe of readings data
+        :return: Nothing
+        """
+        # Clear the un-merged data
+        del_sql = '''
+            DELETE FROM readings
+             WHERE eventtime >= '{0}'
+               AND eventtime <= '{1}'
+        '''.format(self.fromdate, self.todate)
+        # print del_sql
+        self.cnx.execute(del_sql)
+
+        # Now write the new merged data back in
+        df.to_sql(name='readings', con=self.cnx, flavor='mysql', if_exists='append', index=False)
