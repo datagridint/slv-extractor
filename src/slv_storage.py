@@ -107,17 +107,13 @@ class CloudSQLStorage(object):
     mysql_connectionstring = 'mysql://{user}:{password}@{host}:{port}/{database}'.format(**config)
 
     def __init__(self, fromdate, todate):
-        self.cnx = create_engine(self.mysql_connectionstring)
+        self.cnx = create_engine(self.mysql_connectionstring, pool_recycle=1800)
         # self.cnx = mysql.connector.connect(**self.config)
         self.fromdate = fromdate
         self.todate = todate
 
-        df = pd.read_sql('show databases;', self.cnx)
-        print df
-
-    # Method to read a particular date range and return a pandas dataframe
     def get_existing_data(self):
-        """ Read in any file in the specified directory that contain data from the previous 24 hours
+        """ Read in any file in the specified directory that contain data from the current specified date range
 
         :return: A pandas dataframe containing all the data found in the previous 24 hours
         """
@@ -127,14 +123,13 @@ class CloudSQLStorage(object):
              WHERE eventtime >= '{0}'
                AND eventtime <= '{1}'
         '''.format(self.fromdate, self.todate)
-        # print sql
 
         df = pd.read_sql(sql=sql, con=self.cnx)
-        # print df
         return df
 
     def write(self, df):
         """ Takes a pandas dataframe and writes the data to CloudSQL
+
         :param df: A dataframe of readings data
         :return: Nothing
         """
@@ -144,7 +139,6 @@ class CloudSQLStorage(object):
              WHERE eventtime >= '{0}'
                AND eventtime <= '{1}'
         '''.format(self.fromdate, self.todate)
-        # print del_sql
         self.cnx.execute(del_sql)
 
         # Now write the new merged data back in

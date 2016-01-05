@@ -15,6 +15,10 @@ import pandas as pd
 import requests
 import requests.packages.urllib3
 from slv_storage import CloudSQLStorage
+import warnings
+
+# Silence FutureWarnings
+warnings.simplefilter(action="ignore", category=FutureWarning)
 
 # Silence the SSL warnings
 requests.packages.urllib3.disable_warnings()
@@ -287,25 +291,22 @@ def main(argv):
     # store = FileStorage(directory, fromdate, todate, cron)
     store = CloudSQLStorage(fromdate, todate)
 
-    # If we're in cron mode, we should merge this data with any previously stored data in the same time range
-    if cron:
-        existing_df = store.get_existing_data()
-        # print existing_df
+    existing_df = store.get_existing_data()
+    # print existing_df
 
-        if existing_df is not None:
-            # merge the current readings with what we found in storage, and then drop duplicates
-            df2 = pd.concat([existing_df, df2], ignore_index=True)
-            print 'Number of records after merging requested and existing data:', df2.shape[0]
-            df2.drop_duplicates(subset=['geoZoneNamesPath', 'name', 'eventTime'], inplace=True)
-            print 'Number of records after deduping merged data:', df2.shape[0]
-        else:
-            print 'Number of records found in this date range:', df2.shape[0]
+    if existing_df is not None:
+        # merge the current readings with what we found in storage, and then drop duplicates
+        df2[['eventTime', 'updateTime']] = df[['eventTime', 'updateTime']].apply(pd.to_datetime)
+        df2 = pd.concat([existing_df, df2], ignore_index=True)
+        print 'Number of records after merging requested and existing data:', df2.shape[0]
+        df2.drop_duplicates(subset=['geoZoneNamesPath', 'name', 'eventTime'], inplace=True)
+        print 'Number of records after deduping merged data:', df2.shape[0]
+    else:
+        print 'Number of records found in this date range:', df2.shape[0]
 
     # Sort and swap the columns so that they're easy to look at in Excel
     df = df2.sort(['geoZoneNamesPath', 'name', 'eventTime'])
-    df = df[
-        ['geoZoneNamesPath', 'name', 'eventTime', 'updateTime', 'Temperature', 'RunningHoursLamp', 'Energy', 'Current',
-         'MainVoltage', 'MeteredPower', 'PowerFactor']]
+    df = df[['geoZoneNamesPath', 'name', 'eventTime', 'updateTime', 'Temperature', 'RunningHoursLamp', 'Energy', 'Current', 'MainVoltage', 'MeteredPower', 'PowerFactor']]
 
     # Write the data to the store
     store.write(df)
@@ -314,7 +315,7 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    print 'Extracting data from SLV API...'
+    print 'Extracting data from SLV API at: ' + str(datetime.now()) + '...'
     main(sys.argv[1:])
 
 # This is the full set of all possible variables that can be extracted from SLV. Many/most of these variables have no
