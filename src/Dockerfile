@@ -26,7 +26,7 @@ RUN pip install --upgrade pandas
 
 # Add script files to /opt/datagrid/bin directory
 COPY slv_storage.py /opt/datagrid/bin/
-COPY slv-extractor.py /opt/datagrid/bin/
+COPY slv_extractor.py /opt/datagrid/bin/
 
 # Add crontab file in the bin directory, and prepare the log directory
 COPY crontab /opt/datagrid/bin/slv-cron
