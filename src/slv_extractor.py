@@ -214,18 +214,20 @@ def get_readings(device_ids, cookiejar):
             exit()
 
         df = pd.read_json(r.text)
-        df = df[['deviceId', 'eventTime', 'updateTime', 'name', 'value', 'status']].rename(
-            columns={'deviceId': 'id', 'name': 'field'})
-        #         print df
+        print df.columns.values
+        if not df.empty:
+            df = df[['deviceId', 'eventTime', 'updateTime', 'name', 'value', 'status']].rename(columns={'deviceId': 'id', 'name': 'field'})
+            #         print df
 
-        if readings_df is None:
-            readings_df = df
-        else:
-            readings_df = pd.concat([readings_df, df], axis=0)
+            if readings_df is None:
+                readings_df = df
+            else:
+                readings_df = pd.concat([readings_df, df], axis=0)
 
         end = start
 
-    readings_df = readings_df.sort(['eventTime', 'id', 'field'])
+    if readings_df is not None:
+        readings_df = readings_df.sort(['eventTime', 'id', 'field'])
 
     return readings_df
 
@@ -252,6 +254,9 @@ def main(argv):
 
     # Get all the readings from these devices
     readings_df = get_readings(devices_df.id, cookiejar)
+    if readings_df is None:
+        print "No readings retrieved from SLV in this time range, exiting..."
+        exit()
 
     # Merge the readings into the device dataframe
     df = readings_df.merge(devices_df, on='id', how='outer')
