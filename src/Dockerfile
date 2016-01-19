@@ -35,4 +35,4 @@ RUN touch /opt/datagrid/log/cron.log
 
 # Run crontab
 RUN crontab /opt/datagrid/bin/slv-cron
-ENTRYPOINT cron && tail -f /opt/datagrid/log/cron.log
+ENTRYPOINT cron -f
